@@ -29,7 +29,7 @@ echo
 
 # Backup list of system packages
 echo "Backing up list of installed packages ..."
-pacman -Q > $BACKUP_STORAGE_PATH$PACMAN_INSTALLED_PACKAGES
+su -c 'pacman -Q > $BACKUP_STORAGE_PATH$PACMAN_INSTALLED_PACKAGES'
 echo "Done!"
 
 # Backup files in user profile directory
