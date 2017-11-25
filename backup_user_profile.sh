@@ -20,16 +20,12 @@ echo "Let's start"
 echo
 echo
 
-BACKUP_STORAGE_PATH=$1
-
-echo "Adjust owner of the external drive"
-su -c 'chown -R $USER:users $BACKUP_STORAGE_PATH'
-
 echo "Backing up list of installed packages ..."
 pacman -Q > /home/andrej/github/Linux_tutorials/ARCH_installed_packages.txt
 echo "Done!"
 
 echo "Backing up user profile directory ..."
+BACKUP_STORAGE_PATH=$1
 su -c "time rsync -avhp --progress $HOME $BACKUP_STORAGE_PATH"
 echo "Done!"
 
