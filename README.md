@@ -5,6 +5,8 @@ Backs up the home directory of an user to an external drive.
 Check the script to find out more.
 
 # Sources
+https://wiki.archlinux.org/index.php/disk_cloning#Cloning_an_entire_hard_disk
+
 https://stackoverflow.com/questions/4181703/how-to-concatenate-string-variables-in-bash  
 https://stackoverflow.com/questions/18568706/check-number-of-arguments-passed-to-a-bash-script  
 https://stackoverflow.com/questions/1378274/in-a-bash-script-how-can-i-exit-the-entire-script-if-a-certain-condition-occurs  

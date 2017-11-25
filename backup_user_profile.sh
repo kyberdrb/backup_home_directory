@@ -21,11 +21,20 @@ echo
 echo
 
 echo "Backing up list of installed packages ..."
-pacman -Q > /home/andrej/github/Linux_tutorials/ARCH_installed_packages.txt
-echo "Done!"
+
+pacman -Qe | cut -d ' ' -f1 > \
+/home/andrej/github/Linux_tutorials/ARCH_installed_packages.txt
+
+echo "The lsit of installed packages has been saved in \
+\"/home/andrej/github/Linux_tutorials/ARCH_installed_packages.txt\""
 
 echo "Backing up user profile directory ..."
+
 BACKUP_STORAGE_PATH=$1
-su -c "time rsync -avhp --progress $HOME $BACKUP_STORAGE_PATH"
+
+#su -c "time rsync -avhp --progress $HOME $BACKUP_STORAGE_PATH"
+#rsync nahradit dd prikazom
+dd if=/dev/sdX of=/dev/sdY bs=64K conv=noerror,sync status=progress
+
 echo "Done!"
 
