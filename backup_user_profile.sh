@@ -37,3 +37,6 @@ echo "************************"
 su -c 'time dd if=/dev/sda of=/dev/sdb bs=64K conv=noerror,sync status=progress'
 
 echo "Done!"
+
+# Sources
+# https://wiki.archlinux.org/index.php/disk_cloning#Cloning_an_entire_hard_disk
