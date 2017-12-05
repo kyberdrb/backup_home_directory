@@ -9,10 +9,10 @@ echo
 echo "Backing up list of installed packages ..."
 
 pacman -Qe | cut -d ' ' -f1 > \
-/home/andrej/github/Linux_tutorials/ARCH_installed_packages.txt
+/home/andrej/github/Linux_tutorials/ARCH_installed_packages_all.txt
 
 echo "The lsit of installed packages has been saved in \
-\"/home/andrej/github/Linux_tutorials/ARCH_installed_packages.txt\""
+\"/home/andrej/github/Linux_tutorials/ARCH_installed_packages_all.txt\""
 
 echo
 echo "************************"
